@@ -45,3 +45,14 @@ SELECT GETDATE() AS 'Şu Anki Tarih ve Saat';
 
 -- 2010-03-25 tarihinin yıl bilgisini geri döndürelim
 SELECT YEAR('2010-03-25') AS 'Yıl';
+
+---------------------------------------
+CREATE FUNCTION Emcet (@Yas FLOAT) 
+RETURNS FLOAT
+AS
+BEGIN
+    DECLARE @Yıl FLOAT;
+    SET @Yıl = @Yas * 26;
+    RETURN @Yıl;
+END;
+
